@@ -1,0 +1,44 @@
+cabal-version: 2.4
+version:       0.1
+name:          acme-cadadr
+category:      Data, Optics
+license:       BSD-3-Clause
+license-file:  LICENSE
+author:        Oleg Grenrus <oleg.grenrus@iki.fi>
+maintainer:    Oleg Grenrus <oleg.grenrus@iki.fi>
+homepage:      http://github.com/phadej/acme-cadadr
+bug-reports:   http://github.com/phadej/acme-cadadr/issues
+copyright:
+  Copyright (C) 2012 Paul Wilson
+  Copyright (C) 2013 Edward A. Kmett
+  Copyright (C) 2019 Oleg Grenrus
+
+build-type:    Simple
+tested-with:
+  GHC ==8.2.2
+   || ==8.4.4
+   || ==8.6.5
+   || ==8.8.4
+   || ==8.10.7
+   || ==9.0.2
+   || ==9.2.8
+   || ==9.4.6
+   || ==9.6.2
+
+synopsis:      car, cdr, cadr, caddr etc.
+description:
+  car, cdr, cadr, caddr etc.
+  Why the package is named @acme-cadadr@? Because /cadadr/ sounds nice.
+
+source-repository head
+  type:     git
+  location: https://github.com/phadej/acme-cadadr
+
+library
+  default-language: Haskell2010
+  hs-source-dirs:   src
+  build-depends:
+    , base         >=4.10  && <5
+    , optics-core  >=0.4.1 && <0.5
+
+  exposed-modules:  Optics.CADADR
